@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+:root {
+  --bg-base: #15171b;
+  --bg-panel: #1c1f25;
+  --bg-panel-hover: #21252c;
+  --border: #2a2d34;
+  --border-bright: #3a3e47;
+
+  --text-primary: #e8e6df;
+  --text-secondary: #9b9a93;
+  --text-tertiary: #6b6a65;
+
+  --signal-critical: #e24b4a;
+  --signal-critical-bg: rgba(226, 75, 74, 0.1);
+  --signal-high: #ef9f27;
+  --signal-high-bg: rgba(239, 159, 39, 0.1);
+  --signal-medium: #378add;
+  --signal-medium-bg: rgba(55, 138, 221, 0.1);
+  --signal-low: #639922;
+  --signal-low-bg: rgba(99, 153, 34, 0.1);
+
+  --accent: #5dcaa5;
+
+  --font-ui: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg-base);
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+@keyframes slide-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; }
+}
