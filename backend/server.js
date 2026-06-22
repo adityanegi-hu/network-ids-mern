@@ -17,7 +17,7 @@ app.set('io', io);
 app.use(cors());
 app.use(express.json());
 
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/network_ids';
+const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/network_ids'; //new mongoose connection string
 
 mongoose.connect(MONGO_URI)
   .then(() => console.log('MongoDB connected:', MONGO_URI))
