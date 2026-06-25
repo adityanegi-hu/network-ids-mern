@@ -38,7 +38,7 @@ npm start                   # runs on http://localhost:5000
 **Don't have MongoDB installed?** Run `npm run sandbox` instead — this
 uses `server.sandbox.js`, which swaps in an in-memory datastore behind
 the exact same API. Good for trying the dashboard before setting up
-real Mongo. Swap back to `npm start` once Mongo is installed for actual.
+real Mongo. Swap back to `npm start` once Mongo is installed for actual
 persistence.
 
 To install MongoDB locally:
